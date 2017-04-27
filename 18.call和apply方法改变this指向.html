@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function add(c,d){
+            return this.a+this.b+c+d;
+        }
+        var o={
+            a:2,
+            b:1
+        }
+        add.call(o,10,20);  //返回2+1+10+20=33;
+        add.apply(o,[12,13]);   //返回2+1+12+13=28;
+    </script>
+</head>
+<body>
+
+</body>
+</html>

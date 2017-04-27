@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.纯粹的函数调用,这里的this代表的是全局对象Global
+        function test(){
+            this.x=1;
+            console.log(this.x);
+        }
+        test()  //返回1
+
+        //2.作为对象方法的调用,这里的this指的就是上级对象
+        function test1(){
+            console.log(this.x);
+        }
+        var o={};
+        o.x=1;
+        o.m=test1;
+        o.m();  //返回1
+
+        //3.作为构造函数的调用,生成一个新的对象object,this指的是这个新对象
+        function test3(){
+            this.x=1;
+        }
+        var o1=new test3();
+        console.log(o1.x);//返回1
+
+        //4.apply调用
+        var x = 0;
+        function test4(){
+            console.log(this.x);
+        }
+        var o2={};
+        o2.x = 1;
+        o2.m = test4;
+        o2.m.apply(); //返回0
+    </script>
+</head>
+<body>
+
+</body>
+</html>

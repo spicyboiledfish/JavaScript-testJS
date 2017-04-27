@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function f(){
+            return this.a;
+        }
+        var g=f.bind({a:"test"});
+        console.log(g());
+
+        var o={
+            a:27,
+            f:f,
+            g:g
+        };
+        console.log(o.f(), o.g());    //27  test
+        //bind与call/apply方法不同的是:bind方法返回的是一个修改过后的函数
+        //bind主要用于异步调用,比如Ajax,setTimeout中
+    </script>
+</head>
+<body>
+
+</body>
+</html>

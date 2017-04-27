@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Animal(){
+            this.age=10;
+            this.gender="female";
+        }
+        Animal.prototype.constructor=Animal;
+        var ani=new Animal();
+
+
+        function Human(){
+            this.eat=function(){
+                console.log("龙虾盖饭");
+            }
+        }
+        Human.prototype=ani;
+        Human.prototype.constructor=Human;
+
+        var hu=new Human();
+        console.log(hu.age)
+
+
+        function Man(){
+            this.top=function(){
+                console.log("top")
+            };
+        }
+        Man.prototype=hu;
+        Man.prototype.constructor=Man;
+
+        var man= new Man();
+
+        function Student(){
+            this.name="xiaoRui";
+        }
+        Student.prototype=man;
+        Student.prototype.constructor=Student();
+
+        var stu= new Student();
+        console.log("student",stu);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

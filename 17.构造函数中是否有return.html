@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+    function Person(){
+//            return 123;                         //值类型
+//            return "abcdef";                    //值类型
+//            return ["a","b"];                   //引用类型
+//            return {a:2};                       //引用类型
+        return function(){ console.log(1)};   //引用类型
+    }
+    Person.prototype.sayHello =
+            function() {
+                console.log('hello world');
+            };
+    console.log(new Person());
+
+    //new Person()分别返回以下:
+    //        1. Person{}
+    //        2. Person{}
+    //        3. ["a","b"];
+    //        4. Object {a:2}
+    //        5. function(){ console.log(1)};
+
+     function Super(a){
+         this.a=a;
+         return 123;
+     }
+    Super.prototype.sayHello=function(){
+        console.log("Hello")
+    }
+     function Super1(a){
+         this.a=a;
+         return {a:2};
+     }
+    Super1.prototype.sayHello=function(){
+        console.log("Hello")
+    }
+     console.log(new Super(1));      //返回Super{a:1},有原型方法sayHello
+     console.log(new Super1(2));     //返回Object{a:2},没有原型方法sayHello
+</script>
+</head>
+<body>
+
+</body>
+</html>

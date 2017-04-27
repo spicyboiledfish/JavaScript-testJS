@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //1.当this为全局作用域的时候,浏览器中就相当于window
+        console.log(this.document===document);
+        console.log(this===window);
+        this.a=37;
+        console.log(window.a);
+
+        //2.一般函数的this(浏览器),默认情况下,this关键字是指向全局对象window的,只有在严格模式下是禁止的.
+        function f1(){
+            return this;
+        }
+        console.log(f1());   //输出winodw对象
+        function f2(){
+            "use strict";
+            return this;
+        }
+        console.log(f2());   //输出undefined
+
+        //3.作为对象方法的函数调用的时候this,指向对象
+        var o={
+            props:37,
+            f:function(){
+                return this.props;
+            }
+        }
+        console.log(o.f());     //用字面量形式创建的对象函数,调用this指向o对象
+
+        var o1={props:36};
+        function test(){
+            return this.props;       //这时候this指向的是window,那么window.props返回的是undefined
+        }
+        o1.f=test;
+        console.log(o1.f());       //将函数test指向o1对象的f属性下,这时候this.props中的this指向对象o1
+
+        //4.对象原型链上的this,指向对象
+        var o3={
+        f:function(){
+            return this.a+this.b;
+        }
+        }
+        var p=Object.create(o3);   //p的原型继承了这个o3的方法
+        console.log("p",p);         //这时候打印出来的p是一个空的对象,p的原型上有o3的方法f
+        p.a=1;
+        p.b=2;
+        console.log(p.f());        //3
+
+        //5.构造函数中的this
+        function MyClass(){
+            this.a1=37;
+        }
+        var o4 = new MyClass();
+        console.log(o4.a1);
+
+        function MyClass2(){
+            this.a1=37;
+           return {b:56};
+        }
+        console.log(window.a1);
+
+        o4=new MyClass2();
+        console.log(o4.a1);
+        console.log(o4.b);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
