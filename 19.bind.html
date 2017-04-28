@@ -37,6 +37,24 @@
 
         var boundGetX=getX.bind(module);         //定义一个变量boundGetX是getX函数中的this绑定到module对象里面,这时候的this,指的就是对象module
         boundGetX();                             //返回81
+
+        //3.bind中的另一个特性:函数颗粒化:把一个函数拆成多个单元.可以用来前端页面模板(有两个参数是固定的,后一个参数在不同页面参数数据不同)
+        //案例1
+        function add(a,b,c){
+            return a+b+c;
+        }
+        var func=add.bind(undefined,100);
+        func(1,2);                                //103     100+1+2
+        var func2=func.bind(undefined,200);
+        func2(10);                                //310     100+200+10
+
+        //案例2
+        function getConfig(color,size,otherOption){
+            console.log(color,size,otherOption);
+        }
+        var defaultConfig=getConfig.bind(null,"#CC0000","1024*768");
+        defaultConfig("123");    //#CC0000 1024*768 123
+        defaultConfig("456")     //#CC0000 1024*768 456
     </script>
 </head>
 <body>
