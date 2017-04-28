@@ -13,6 +13,8 @@
         }
         add.call(o,10,20);  //返回2+1+10+20=33;
         add.apply(o,[12,13]);   //返回2+1+12+13=28;
+        //call和apply中传入的第一个参数如果是null/undefined的话,那么这个this的指向就是window;
+        //但是在严格模式下"use strict",传入的是null,this就指向null;传入undefiend,this就指向undefined
     </script>
 </head>
 <body>

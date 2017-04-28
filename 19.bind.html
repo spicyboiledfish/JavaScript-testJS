@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
+
+        //1.第一个案例:
         function f(){
             return this.a;
         }
@@ -18,6 +20,23 @@
         console.log(o.f(), o.g());    //27  test
         //bind与call/apply方法不同的是:bind方法返回的是一个修改过后的函数
         //bind主要用于异步调用,比如Ajax,setTimeout中
+
+        //2.第二个案例:
+        this.x=9;                                //默认情况下,this.x中的x指向的是window,所以window对象中的x是9
+        var module={                             //创建一个module对象,x是81,getX是一个function,返回this.x
+            x:81,
+            getX:function(){
+                return this.x;
+            }
+        };
+        module.getX();                           //module.getX(),以对象的形式调用,这里的this指向的是对象,所以返回81
+        var getX=module.getX;                     //定义一个变量getX是module里面的函数,相当于var getX=function(){ return this.x}
+        /** 注意这里:var getX=module.getX;而不是 var getX=module.getX() 加了括号就是调用了,是把方法名赋值过去,然后才开始调用的时候加括号  **/
+
+        getX();                                  //这里this是window指向,返回9
+
+        var boundGetX=getX.bind(module);         //定义一个变量boundGetX是getX函数中的this绑定到module对象里面,这时候的this,指的就是对象module
+        boundGetX();                             //返回81
     </script>
 </head>
 <body>
