@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1. 用递归的方法实现斐波拉契数列:
+        //增加count计数来计算每次fib函数执行的次数:
+        //存在的问题:重复计算的次数太多,
+        var count=0;
+        function fib(n){
+            count++;
+            if(n<=2){
+                return 1;
+            }else{
+                return fib(n-1)+fib(n-2);
+            }
+        }
+        fib(5);
+        console.log(count);   //9
+
+        count=0;
+        fib(20);
+        console.log(count);   //13529
+
+        //2. 优化时间复杂度,可以使用非递归的方式实现斐波拉契数列:
+        var count1=0;
+        function fib1(n){
+
+            var a, b,res;
+            a=b=1;
+            if(n<=2){
+                return 1;
+            }else{
+                for(var i=3;i<=n;i++){
+                    count1++;
+                    res=a+b;
+                    a=b;
+                    b=res;
+                }
+                return res;
+            }
+        }
+        fib1(20);   //6765
+        console.log(count1);   //18
+
+        //3.利用数组存储的方式优化递归实现的斐波拉契数列算法:
+        var arr=[];
+        var count2=0;
+        function fib2(n){
+            count2++;
+            var num=arr[n];
+            if(num){
+                return num;
+            }else{
+                if(n<=2){
+                    return 1;
+                }else{
+                    num=fib2(n-1)+fib2(n-2);
+                    arr[n]=num;
+                    return num;
+                }
+            }
+        }
+        fib2(20);    //5
+        console.log(count2);
+
+        //4.利用闭包优化递归实现的斐波拉契数列算法:(保护了数组变量arr)
+        function fib3(){
+            var arr=[];
+            function fibIn(n){
+                var num=arr[n];
+                if(num){
+                    return num;
+                }else{
+                    if(n<=2){
+                        return 1;
+                    }else{
+                        num=fib2(n-1)+fib2(n-2);
+                        arr[n]=num;
+                        return num;
+                    }
+                }
+            }
+            return fibIn;
+        }
+        var fn=fib3();
+        fn(5);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

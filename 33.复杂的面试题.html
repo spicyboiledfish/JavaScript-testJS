@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //原题:
+        function Foo() {
+            getName = function(){ console.log(1); };
+            return this;
+        }
+        Foo.getName = function() { console.log(2); };
+        Foo.prototype.getName = function(){ console.log(3); };
+        var getName = function() { console.log(4); };
+        function getName(){ console.log(5); }
+
+        //将上述的题目改成变量提升后的情况:
+        function Foo(){
+            getName = function(){ console.log(1); };
+            return this;
+        }
+        function getName(){ console.log(5); }
+        Foo.getName = function() { console.log(2); };
+        Foo.prototype.getName = function(){ console.log(3); };
+        var getName;
+        getName = function() { console.log(4); };
+
+
+        Foo.getName();  // ?2
+
+        getName();   // ?4
+
+        Foo().getName();  // ?1
+
+        new Foo.getName();  // ?2
+
+        new Foo().getName();  // ?3
+
+        new new Foo().getName();  // ?3
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

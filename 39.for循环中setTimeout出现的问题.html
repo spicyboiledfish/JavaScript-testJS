@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        for(var i=0;i<10;i++){
+            function outer(){
+                var j=i;
+                function inner(){
+                    console.log(j);
+                }
+                return inner;
+            }
+            setTimeout(outer(),0);
+//            setIimout(function(){
+//                console.log(i)
+//            },0);    //打印10次10
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

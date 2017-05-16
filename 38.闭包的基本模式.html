@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.基本模式:
+        function outer(){
+            var data=10;
+            function inner(){
+                return data;
+            }
+            return inner;
+        }
+        var fn=outer();
+        fn();
+
+        //2.获取独立变量和设置独立变量:
+        function outer(){
+            var data=10;
+            function getData(){
+                return data;
+            }
+            function setData(value){
+                data=value;
+                return data;
+            }
+            return {
+                getData:getData,
+                setData:setData
+            };
+        }
+        var fn=outer().setData;
+        fn(100);   //100
+
+        fn=outer().getData;
+        fn();      //10
+
+        //3.优化代码
+        function outer(){
+            var data=10;
+            function inner(value){
+                if(value){
+                    data=value;
+                }
+                return data;
+            }
+            return inner;
+        }
+        var fn=outer();
+        fn();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
