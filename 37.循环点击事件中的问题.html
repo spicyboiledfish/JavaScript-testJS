@@ -16,16 +16,16 @@
             var divs=document.getElementsByTagName("div");
             for(var i=0;i<divs.length;i++){
                 var div=divs[i];
-                function outer(){
-                    var j=i;
-                    return function(){
-                        console.log("我是第"+j+"个div");
-                    }
-                }
-                div.onclick=outer();   //利用闭包解决了循环点击出现的问题
-//                div.onclick=function(){
-//                    console.log("我是第"+i+"个div");
+//                function outer(){
+//                    var j=i;
+//                    return function(){
+//                        console.log("我是第"+j+"个div");
+//                    }
 //                }
+//                div.onclick=outer();   //第一种办法:利用闭包解决了循环点击出现的问题
+                div.onclick=function(){
+                    console.log(this.innerHTML);    //第二种解决办法,用this.innerHTML,是循环时间的当前事件源
+                }
             }
         }
 
