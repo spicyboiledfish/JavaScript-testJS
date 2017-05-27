@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab5c30bd-8ae1-4437-920a-7b93830bd96e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/down.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/left.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/right.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/up.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/46.下拉菜单.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/47.下拉菜单第二种方法.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/48.线上搜索.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/22.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/33.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/44.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/55.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/movie.mp4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/49.JQ转JS (用JS的方法写JQ语法).html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/50.JS转JQ.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/51.手风琴效果.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery-1.12.1.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/37.循环点击事件中的问题.html" afterPath="$PROJECT_DIR$/37.循环点击事件中的问题.html" />
     </list>
     <ignored path="testJS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,21 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="48.线上搜索.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/48.线上搜索.html">
+      <file leaf-file-name="51.手风琴效果.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/51.手风琴效果.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.5">
-              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="37.循环点击事件中的问题.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/37.循环点击事件中的问题.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46680498">
-              <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.6887967">
+              <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -73,9 +65,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/3.localStorage.html" />
-        <option value="$PROJECT_DIR$/4.原型/构造函数/对象.html" />
-        <option value="$PROJECT_DIR$/4.构造函数.原型.实例化对象.html" />
         <option value="$PROJECT_DIR$/6.继承.html" />
         <option value="$PROJECT_DIR$/5.原型链.html" />
         <option value="$PROJECT_DIR$/7.原型链2.html" />
@@ -124,6 +113,9 @@
         <option value="$PROJECT_DIR$/47.下拉菜单第二种方法.html" />
         <option value="$PROJECT_DIR$/48.线上搜索.html" />
         <option value="$PROJECT_DIR$/37.循环点击事件中的问题.html" />
+        <option value="$PROJECT_DIR$/50.JS转JQ.html" />
+        <option value="$PROJECT_DIR$/49.JQ转JS (用JS的方法写JQ语法).html" />
+        <option value="$PROJECT_DIR$/51.手风琴效果.html" />
       </list>
     </option>
   </component>
@@ -133,8 +125,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="666" />
-    <option name="y" value="393" />
+    <option name="x" value="917" />
+    <option name="y" value="298" />
     <option name="width" value="1447" />
     <option name="height" value="755" />
   </component>
@@ -200,6 +192,7 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -700,15 +693,15 @@
       <workItem from="1494469857254" duration="12309000" />
       <workItem from="1494815579154" duration="19577000" />
       <workItem from="1494988596179" duration="5139000" />
-      <workItem from="1495072877016" duration="18228000" />
+      <workItem from="1495072877016" duration="24685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165995000" />
+    <option name="totallyTimeSpent" value="172452000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="666" y="393" width="1447" height="755" extended-state="0" />
+    <frame x="917" y="298" width="1447" height="755" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -720,7 +713,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19699249" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2469751" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2469751" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -757,41 +750,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/2.this的用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2.this的用法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26355612">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3.localStorage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28751576">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5.原型链.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.428572">
-          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/11.toString.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25770652">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/13.数组迭代.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.32142857">
@@ -1115,8 +1073,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/37.循环点击事件中的问题.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46680498">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
+        <state vertical-scroll-proportion="-7.5833335">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jquery-1.12.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/50.JS转JQ.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/49.JQ转JS (用JS的方法写JQ语法).html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/11.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/51.手风琴效果.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6887967">
+          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
           <folding />
         </state>
       </provider>

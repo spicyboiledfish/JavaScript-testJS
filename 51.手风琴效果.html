@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul,li,*{
+            padding:0;
+            margin:0;
+        }
+        .box{
+            width:1000px;
+            height:400px;
+            border:1px solid orange;
+            margin:100px auto;
+            border-left:0;
+            overflow: hidden;
+        }
+        .list{
+            width:1020px;
+            height:400px;
+        }
+        .list li{
+            width:199px;
+            border-left:1px solid orange;
+            height:400px;
+            float: left;
+            list-style: none;
+            overflow: hidden;
+        }
+        img{
+            /*display: block;*/
+            border:0;
+        }
+    </style>
+    <script src="jquery-1.12.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var aLi=$('.list li');
+            aLi.hover(function(){
+                $(this).stop().animate({'width':599},500);
+                $(this).siblings().stop().animate({'width':99},500);
+            },function(){
+                aLi.animate({'width':199},500);
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="box">
+        <ul class="list">
+            <li><a href="javascript:;"><img src="img/11.jpg"/></a></li>
+            <li><a href="javascript:;"><img src="img/22.jpg"/></a></li>
+            <li><a href="javascript:;"><img src="img/33.jpg"/></a></li>
+            <li><a href="javascript:;"><img src="img/44.jpg"/></a></li>
+            <li><a href="javascript:;"><img src="img/55.jpg"/></a></li>
+        </ul>
+    </div>
+</body>
+</html>
