@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.Promise对象需要用一个函数包裹,否则就会立即执行了
+        function runAsync(){
+            var p=new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    console.log("执行完成!");
+                    resolve("这里是成功后的回调函数");   //2秒后开始有输出"执行完成",之后开始执行resolve成功回调.
+                    reject("失败啦,这里是失败之后的回调函数");
+                },2000);
+            });
+            return p;
+        }
+
+        runAsync().then(function(data){   //这里的then就相当于回调函数
+            console.log(data);
+        })
+
+        //2.Promise可以简化层层回调的方法,比callback更加简单灵活
+        //通过以下的.then链式操作,实现了多层异步嵌套,写法更加优雅简单.
+        function runAsync1(){
+            var p=new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    console.log("异步任务1执行完成");
+                    resolve("1的回调函数");   //2秒后开始有输出"执行完成",之后开始执行resolve成功回调.
+                    reject("1失败的回调函数");
+                },2000);
+            });
+            return p;
+        }
+        function runAsync2(){
+            var p=new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    console.log("异步任务2执行完成");
+                    resolve("2的回调函数");   //2秒后开始有输出"执行完成",之后开始执行resolve成功回调.
+                    reject("2失败的回调函数");
+                },2000);
+            });
+            return p;
+        }
+        function runAsync3(){
+            var p=new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    console.log("异步任务3执行完成");
+                    resolve("3的回调函数");   //2秒后开始有输出"执行完成",之后开始执行resolve成功回调.
+                    reject("3失败的回调函数");
+                },2000);
+            });
+            return p;
+        }
+        runAsync1()
+        .then(function(data){
+            console.log(data);    //1的回调函数,并且返回执行2的异步
+            return runAsync2();   //要用return
+        })
+        .then(function(data){
+            console.log(data);
+            return runAsync3();     //2的回调函数,并且返回 执行 3的异步
+        })
+        .then(function(data){
+            return console.log(data);  //3的回调函数
+        })
+
+        //3.reject的用法:
+        function getNumber(){
+            var p=new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    var num=Math.ceil(Math.random()*10);
+                    if(num<=5){
+                        resolve(num);
+                    }else{
+                        reject("失败啦,数字太大了哦!");
+                    }
+                },2000);
+            })
+            return p;
+        }
+        getNumber()
+        .then(
+            function(data){
+                console.log("resolved");
+                console.log(data);
+            },          //then括号内的第一个函数是成功后的回调函数
+            function(reason){
+                console.log("rejected");
+                console.log(reason);
+            }           //then括号内的第二个函数是失败后的回调函数
+        )
+
+        //4.catch的用法,抛出异常进入到catch方法,不会报错卡死js
+        function getNumber1(){
+            var p=new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    var num=Math.ceil(Math.random()*10);
+                    if(num<=5){
+                        resolve(num);
+                    }else{
+                        reject("失败啦,数字太大了哦!");
+                    }
+                },2000);
+            })
+            return p;
+        }
+        getNumber1()
+        .then(
+                function(data){
+                    console.log("resolved");
+                    console.log(data);
+                    console.log(someday);
+                }
+
+        )
+        .catch(function(reason){
+            console.log("rejected");
+            console.log(reason);
+
+        })
+
+        //打印出来的结果:
+        //resolved
+        //4
+        //rejected
+        //ReferenceError: someday is not defined
+
+        //意思是:4进入到成功回调了,但是回调函数中的someday没有定义报错异常,被catch捕获到错误了,进入catch方法里
+        //但是并没有js停掉卡死
+
+
+        //5.all的用法:
+        //all提供了并行执行异步操作的能力,并且在所有异步操作执行完成之后才执行回调.
+        function runAsync4(){
+            var p=new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    console.log("异步任务1执行完成");
+                    resolve("1的回调函数");   //2秒后开始有输出"执行完成",之后开始执行resolve成功回调.
+                    reject("1失败的回调函数");
+                },2000);
+            });
+            return p;
+        }
+        function runAsync5(){
+            var p=new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    console.log("异步任务2执行完成");
+                    resolve("2的回调函数");   //2秒后开始有输出"执行完成",之后开始执行resolve成功回调.
+                    reject("2失败的回调函数");
+                },2000);
+            });
+            return p;
+        }
+        function runAsync6(){
+            var p=new Promise(function(resolve,reject){
+                setTimeout(function(){
+                    console.log("异步任务3执行完成");
+                    resolve("3的回调函数");   //2秒后开始有输出"执行完成",之后开始执行resolve成功回调.
+                    reject("3失败的回调函数");
+                },2000);
+            });
+            return p;
+        }
+//        Promise
+//        .all([runAsync4(),runAsync5(),runAsync6()])
+//        .then(function(results){
+//            console.log(results);
+//        })
+        //打印结果:
+        //异步任务1执行完成
+        //异步任务2执行完成
+        //异步任务3执行完成
+        //["1的回调函数", "2的回调函数", "3的回调函数"]
+
+        //用all去并行执行多个异步操作,并且在一个回调中处理所有的返回函数
+        //谁跑的慢,以谁为准执行回调
+
+        //6.race的用法:
+        //和all用法一样,但是他是谁跑的快,以谁为准执行回调
+        Promise
+        .race([runAsync4(), runAsync5(), runAsync6()])
+        .then(function(results){
+            console.log(results);
+        });
+
+        //打印结果:
+        //异步任务1执行完成
+        //1的回调函数
+        //异步任务2执行完成
+        //异步任务3执行完成
+
+        //race是用来给某个异步请求设置超时时间
+    </script>
+</head>
+<body>
+
+</body>
+</html>
