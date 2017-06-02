@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab5c30bd-8ae1-4437-920a-7b93830bd96e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeJS/1.__dirname&amp;readFile/foo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/nodeJS/1.__dirname&amp;readFile/test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/53.全面理解ES6中的Promise.html" afterPath="$PROJECT_DIR$/53.全面理解ES6中的Promise.html" />
     </list>
     <ignored path="testJS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +26,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="53.全面理解ES6中的Promise.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="53.全面理解ES6中的Promise.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/53.全面理解ES6中的Promise.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.690367">
+            <state vertical-scroll-proportion="0.0">
               <caret line="230" column="13" selection-start-line="230" selection-start-column="13" selection-end-line="230" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="foo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nodeJS/1.__dirname&amp;readFile/foo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nodeJS/1.__dirname&amp;readFile/test.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.13043478">
+              <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nodeJS/1.__dirname&amp;readFile/test/bar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -40,8 +71,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -56,9 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/7.原型链2.html" />
-        <option value="$PROJECT_DIR$/8.判断数据类型.html" />
-        <option value="$PROJECT_DIR$/9.经典继承.html" />
         <option value="$PROJECT_DIR$/10.序列化.html" />
         <option value="$PROJECT_DIR$/11.toString.html" />
         <option value="$PROJECT_DIR$/12.数组.html" />
@@ -107,6 +135,9 @@
         <option value="$PROJECT_DIR$/51.手风琴效果.html" />
         <option value="$PROJECT_DIR$/52.用正则表达式去除字符串两边的空格.html" />
         <option value="$PROJECT_DIR$/53.全面理解ES6中的Promise.html" />
+        <option value="$PROJECT_DIR$/nodeJS/1.__dirname&amp;readFile/bar.js" />
+        <option value="$PROJECT_DIR$/nodeJS/1.__dirname&amp;readFile/foo.js" />
+        <option value="$PROJECT_DIR$/nodeJS/1.__dirname&amp;readFile/test.js" />
       </list>
     </option>
   </component>
@@ -116,8 +147,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="587" />
-    <option name="y" value="297" />
+    <option name="x" value="417" />
+    <option name="y" value="242" />
     <option name="width" value="1447" />
     <option name="height" value="755" />
   </component>
@@ -146,8 +177,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -166,9 +198,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.__dirname&amp;readFile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -686,15 +735,16 @@
       <workItem from="1494988596179" duration="5139000" />
       <workItem from="1495072877016" duration="25454000" />
       <workItem from="1496218365204" duration="6615000" />
-      <workItem from="1496370457200" duration="1959000" />
+      <workItem from="1496370457200" duration="3419000" />
+      <workItem from="1496383640055" duration="546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181795000" />
+    <option name="totallyTimeSpent" value="183801000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="587" y="297" width="1447" height="755" extended-state="0" />
+    <frame x="417" y="242" width="1447" height="755" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -743,27 +793,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/14.数组方法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16974169">
-          <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/16.this表示全局变量.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.235294">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/17.构造函数中是否有return.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46125463">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/1.闭包.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.875">
@@ -1104,8 +1133,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/53.全面理解ES6中的Promise.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.690367">
+        <state vertical-scroll-proportion="0.0">
           <caret line="230" column="13" selection-start-line="230" selection-start-column="13" selection-end-line="230" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodeJS/1.__dirname&amp;readFile/test/bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodeJS/1.__dirname&amp;readFile/foo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodeJS/1.__dirname&amp;readFile/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13043478">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding />
         </state>
       </provider>
