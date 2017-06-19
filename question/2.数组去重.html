@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.用indexof:
+        function distinct(arr){
+            var result=[];
+            for(var i=0;i<arr.length;i++){
+                if(result.indexOf(arr[i])==-1){
+                    result.push(arr[i]);
+                }
+            }
+            return result;
+        }
+
+        //2.用new Set():
+        function distinct1(arr){
+            return Array.from(new Set(arr));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var p = [];
+        var A = new Function();
+        A.prototype = p;
+        var a = new A;
+        a.push(1);
+        alert(a.length);  //1
+        alert(p.length);  //0
+    </script>
+</head>
+<body>
+
+</body>
+</html>

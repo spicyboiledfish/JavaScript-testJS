@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab5c30bd-8ae1-4437-920a-7b93830bd96e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/56.箭头函数中的this.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/57.将伪数组转化为真数组.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/question/1.Array和HTMLCollection.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/question/2.数组去重.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/question/3.闭包.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/question/4.原型.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/question/5.数组降维.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="testJS.iws" />
@@ -26,61 +29,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="51.手风琴效果.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/51.手风琴效果.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="48.线上搜索.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/48.线上搜索.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="55.实现圆形点击区域.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/55.实现圆形点击区域.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="56.箭头函数中的this.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/56.箭头函数中的this.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="57.将伪数组转化为真数组.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="57.将伪数组转化为真数组.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/57.将伪数组转化为真数组.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6849315">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.625">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hello.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hello.js">
+      <file leaf-file-name="1.Array和HTMLCollection.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/question/1.Array和HTMLCollection.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="3" selection-start-line="0" selection-start-column="3" selection-end-line="0" selection-end-column="3" />
+            <state vertical-scroll-proportion="-1.25">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2.数组去重.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/question/2.数组去重.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.875">
+              <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3.闭包.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/question/3.闭包.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.25">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="4.原型.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/question/4.原型.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="5.数组降维.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/question/5.数组降维.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6849315">
+              <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -147,11 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/16.this表示全局变量.html" />
-        <option value="$PROJECT_DIR$/17.构造函数中是否有return.html" />
-        <option value="$PROJECT_DIR$/20.函数属性&amp;arguments.html" />
-        <option value="$PROJECT_DIR$/18.call和apply方法改变this指向.html" />
-        <option value="$PROJECT_DIR$/19.bind.html" />
         <option value="$PROJECT_DIR$/21.闭包2.html" />
         <option value="$PROJECT_DIR$/22.常见错误之循环闭包.html" />
         <option value="$PROJECT_DIR$/24.eval计算器.html" />
@@ -198,6 +196,11 @@
         <option value="$PROJECT_DIR$/55.实现圆形点击区域.html" />
         <option value="$PROJECT_DIR$/56.箭头函数中的this.html" />
         <option value="$PROJECT_DIR$/57.将伪数组转化为真数组.html" />
+        <option value="$PROJECT_DIR$/question/1.Array和HTMLCollection.html" />
+        <option value="$PROJECT_DIR$/question/2.数组去重.html" />
+        <option value="$PROJECT_DIR$/question/3.闭包.html" />
+        <option value="$PROJECT_DIR$/question/4.原型.html" />
+        <option value="$PROJECT_DIR$/question/5.数组降维.html" />
       </list>
     </option>
   </component>
@@ -207,8 +210,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="713" />
-    <option name="y" value="221" />
+    <option name="x" value="457" />
+    <option name="y" value="203" />
     <option name="width" value="1447" />
     <option name="height" value="755" />
   </component>
@@ -254,6 +257,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="testJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="testJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="question" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -783,15 +800,15 @@
       <workItem from="1496384421373" duration="4042000" />
       <workItem from="1496913221838" duration="1641000" />
       <workItem from="1496994816594" duration="1996000" />
-      <workItem from="1497839487406" duration="1423000" />
+      <workItem from="1497839487406" duration="8119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192903000" />
+    <option name="totallyTimeSpent" value="199599000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="713" y="221" width="1447" height="755" extended-state="0" />
+    <frame x="457" y="203" width="1447" height="755" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -840,41 +857,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/23.解决Function方法体过长.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5564516">
-          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/25.完整原型链.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36290324">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/6.继承.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21774194">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/9.经典继承.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7983871">
-          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/10.序列化.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7096774">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/8.判断数据类型.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7096774">
@@ -1199,8 +1181,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/57.将伪数组转化为真数组.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.625">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/question/1.Array和HTMLCollection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/question/2.数组去重.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/question/3.闭包.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/question/4.原型.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/question/5.数组降维.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6849315">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding />
         </state>
       </provider>
