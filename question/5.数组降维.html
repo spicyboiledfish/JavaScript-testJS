@@ -8,18 +8,17 @@
         //写一个函数fn(a)=>[3,5,8,6,10,12];
 
         //1.用concat:
-        function fn(a){
-            var result=[];
-            for(var i=0;i< a.length;i++){
-                result=result.concat(a[i]);
-            }
-            for(var j=0;j<result.length;j++){
-                if(result[j].constructor==Array){
-                    fn(result);
+        function fn(arr) {
+            var newArr = [];
+              for (var i = 0; i < arr.length; i++) {
+                if (Array.isArray(arr[i])) {
+                  newArr = newArr.concat(fn(arr[i])); 
+                } else {
+                  newArr = newArr.concat(arr[i]);
                 }
+              }
+              return newArr;
             }
-            console.log(result);
-        }
         fn([[3,5,[8,6],10],12]);  //[3,5,8,6,10,12]
 
         //2.用toString
