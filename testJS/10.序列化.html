@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var obj={
+            name:'小睿',
+            x:1,
+            y:true,
+            z:[1,2,3],
+            nullVal:null
+        };
+        //传给后端需要一个字符串的格式,就需要把对象转换为字符串格式.JSON.stringify()
+        console.log(JSON.stringify(obj));
+
+        //注意事项:
+        //1.如果你的对象中存在键值对的值是undefined,那么序列化后就不会出现在字符串中
+        //2.如果键值对的属性值是NaN或者Infinity,那么序列化后都会转化为null
+        //3.如果键值对的属性值是new Date(),则序列化后转化为UTC时间
+        var obj1={
+            val:undefined,
+            a:NaN,
+            b:Infinity,
+            c:new Date()
+        }
+        console.log(JSON.stringify(obj1));
+
+        //如果是后端接口返回的序列化的字符串,如何转化为对象.用JSON.parse().注:括号里面需要规范些属性名用双引号包裹起来
+        var obj2='{"x":1,"name":"小王"}';
+        obj2=JSON.parse(obj2);
+        console.log(obj2);
+        console.log(obj2.x);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

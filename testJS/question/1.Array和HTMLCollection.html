@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="d">
+        <div id="a"></div>
+        <div id="b"></div>
+        <div id="c"></div>
+    </div>
+    <script>
+        var a=[document.getElementById('a'),document.getElementById('b'),document.getElementById('c')];
+        var b=document.getElementById('d').getElementsByTagName('div');
+
+        //a和b的区别
+        //a:Array[3]:div#a,div#b,div#c
+        //b:HTMLCollection[3]:div#a,div#b,div#c
+
+        var arr=[];
+        arr.push.apply(arr,b);  //将HTMLCollection转化为真的数组
+    </script>
+</body>
+</html>

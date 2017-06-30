@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font-size: 16px;
+            /*设置body为16px,就是1em=16px;*/
+        }
+        p{
+            font-size: 0.75em;
+            /*这里的p就是继承父级,所以,0.75em=0.75*16=12px;*/
+        }
+        span{
+            font-size:2em;
+            /*这里的span也是继承父级,所以2em=2*12px=24px;*/
+        }
+    </style>
+    <script>
+    </script>
+</head>
+<body>
+    <!--px em rem都是相对大小的单位,px是相对屏幕设备分辨率而言的,em是相对于父级元素继承的,rem是相对于根元素的-->
+    <!--cm mm inch是绝对大小的单位.-->
+    <p>我是p标签
+        <span>我是span标签</span>
+    </p>
+</body>
+</html>

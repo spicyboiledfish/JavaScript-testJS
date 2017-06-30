@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/template" id="content">
+        var sum=0;
+        for(var i=n; i<m; i++){
+            if(i%2==0){
+                sum+=i;
+            }
+        }
+        return sum;
+    </script>
+    <script>
+
+        //第一种办法:使用``反引号,ES6中的语法:
+        var func=new Function(
+                "n",
+                "m",
+                `
+                var sum=0;
+                for(var i=n;i<m;i++){
+                    if(i%2==0){
+                        sum+=i;
+                    }
+                }
+                return sum;
+                    `);
+        func(1,100);   //2450
+
+        //第二种办法:使用字符串拼接,通过不换行的方式来解决
+        var func1=new Function("n","m","var sum=0;for(var i=n;i<m;i++){if(i%2==0){sum+=i;}}return sum;");
+        func1(1,100);  //2450
+
+        //第三种办法:可以使用双引号拼接的方式""+""+"",webstorm会自动补充+号和"双引号
+        var func2=new Function("n","m","var sum=0;" +
+                "for(var i=n;i<m;i++){" +
+                "if(i%2==0){" +
+                "sum+=i;" +
+                "}" +
+                "}" +
+                "return sum;");
+        func2(1,100);
+
+        //第四种方法:模板引擎
+            var content=document.getElementById("content");
+            var methodBody=content.innerHTML;
+            var func3=new Function("n","m",methodBody);
+            func3(1,100);
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

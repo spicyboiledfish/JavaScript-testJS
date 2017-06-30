@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //Object.create()方法存在浏览器不兼容的情况,目前测试是Chrome/Opera/Firefox浏览器兼容,而Safari和IE浏览器部分是不兼容的
+        var obj={
+            name:'哈哈哈',
+            age:18
+        }
+        var p=Object.create(obj);
+        console.log(p.name);
+
+        //封装了一个可以直接返回继承后了的对象
+        function myCreate(obj){
+            if(Object.create){
+                return Object.create(obj);
+            }else{
+                function F(){}
+                F.prototype=obj;
+                return new F();
+            }
+        }
+
+        var m=myCreate(obj);
+        console.log(m.age);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

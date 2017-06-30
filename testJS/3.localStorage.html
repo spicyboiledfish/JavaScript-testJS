@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        console.log(Storage)
+       if(typeof (Storage) !== "undefined"){
+           //store
+           localStorage.setItem("xiaoRui","xiaoWang");  //设置一个字段
+
+           //retrieve
+           document.getElementById("result").innerHTML=localStorage.getItem("xiaoRui");   //取字段并显示在页面上
+       }else{
+           document.getElementById("result").innerHTML="抱歉!您的浏览器不支持web storage"
+       }
+    </script>
+
+</body>
+</html>

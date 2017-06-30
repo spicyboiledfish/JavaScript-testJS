@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //获取body后代的所有元素,并且加上1px solid red的边框:
+        //在原生js中没有直接获取所有后代元素的方法,但是有获取子代元素的方法,通过递归,一层一层往下找即可
+
+        function children(ele){
+            var arr=[];
+            var eles= ele.childNodes;            //ele传值是body时,那么eles是三个div的数组
+            for(var i=0;i<2;i++){
+                var child=eles[i];               //i=0的时候,child是第一个div
+                if(child.nodeType==1){
+                    arr.push(child);             //在arr为空数组的情况下,加上第一个div
+                    var temp = children(child);  //对这个第一个div进行再求childNodes,这时候temp是三个p的数组
+                    arr=arr.concat(temp);        //concat()方法用于连接两个或多个数组,这时候arr为div,
+                }
+            }
+            return arr;
+        }
+
+        window.onload=function(){
+            //console.log(document.body.children)  //只能获取子代元素,三个div,并没有获取到p和span
+            //获取子代元素
+            var res=children(document.body);
+            console.log(res);
+            for (var i = 0; i < res.length; i++) {
+                var obj = res[i];
+                obj.style.border = "1px solid red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div>我是div
+        <p>我是p标签<span>我是span标签</span><span>我是span标签</span><span>我是span标签</span></p>
+        <p>我是p标签<span>我是span标签</span><span>我是span标签</span><span>我是span标签</span></p>
+        <p>我是p标签<span>我是span标签</span><span>我是span标签</span><span>我是span标签</span></p>
+    </div>
+    <div>我是div
+        <p>我是p标签<span>我是span标签</span><span>我是span标签</span><span>我是span标签</span></p>
+        <p>我是p标签<span>我是span标签</span><span>我是span标签</span><span>我是span标签</span></p>
+        <p>我是p标签<span>我是span标签</span><span>我是span标签</span><span>我是span标签</span></p>
+    </div>
+    <div>我是div
+        <p>我是p标签<span>我是span标签</span><span>我是span标签</span><span>我是span标签</span></p>
+        <p>我是p标签<span>我是span标签</span><span>我是span标签</span><span>我是span标签</span></p>
+        <p>我是p标签<span>我是span标签</span><span>我是span标签</span><span>我是span标签</span></p>
+    </div>
+</body>
+</html>

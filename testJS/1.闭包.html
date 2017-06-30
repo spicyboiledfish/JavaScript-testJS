@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        var name="The Window";
+//        var object={
+//            name:"My Object",
+//            getNameFunc:function(){
+//                return function (){
+//                    return this.name;
+//                };
+//            }
+//        };
+//
+//        console.log(object.getNameFunc()()); //输出的结果是"The Window",这里this指的是全局变量
+        var name ="The Window";
+        var object={
+            name:'My Object',
+            getNameFunc:function(){
+                var that=this;
+                return function (){
+                    return that.name;
+                };
+            }
+        };
+        console.log(object.getNameFunc()());  //输出的结果是"My Object",这里的that就指明了getNameFunc里面的变量范围
+    </script>
+</head>
+<body>
+
+</body>
+</html>

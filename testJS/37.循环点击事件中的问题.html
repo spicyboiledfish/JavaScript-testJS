@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border:solid 1px #000;
+            margin-bottom: 10px;
+            width:70px;
+            height:20px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var divs=document.getElementsByTagName("div");
+            for(var i=0;i<divs.length;i++){
+                var div=divs[i];
+//                function outer(){
+//                    var j=i;
+//                    return function(){
+//                        console.log("我是第"+j+"个div");
+//                    }
+//                }
+//                div.onclick=outer();   //第一种办法:利用闭包解决了循环点击出现的问题
+                div.onclick=function(){
+                    console.log(this.innerHTML);    //第二种解决办法,用this.innerHTML,是循环时间的当前事件源
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div>第0个div</div>
+    <div>第1个div</div>
+    <div>第2个div</div>
+    <div>第3个div</div>
+    <div>第4个div</div>
+    <div>第5个div</div>
+    <div>第6个div</div>
+</body>
+</html>

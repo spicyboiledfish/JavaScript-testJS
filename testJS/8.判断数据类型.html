@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.用的是typeof判断,返回的是字符串型
+        //判断基本数据类型:string/number/boolean/function/undefined类型
+        console.log(typeof('str'));
+        console.log(typeof(123));
+        console.log(typeof(true));
+        console.log(typeof(function(){}));
+        console.log(typeof(undefined));
+
+        //对数组/对象/null类型都是统一打印出来的是object类型
+        console.log(typeof([1,2,3]));
+        console.log(typeof({name:'',age:0}));
+        console.log(typeof(null));
+
+        //2.用instanceof:检测对象的原型链上是否有构造函数的prototype属性的,返回的是布尔型
+        //左操作数:实例化对象,右操作数:构造函数.
+        //可判断数组类型
+        function Person(){
+        }
+        function Student(){
+        }
+        Student.prototype=new Person();
+        Student.prototype.constructor=Student;
+        console.log(new Student() instanceof Person);
+
+        var arr=[1,2,3];
+        console.log(arr instanceof Array);
+
+        //3.constructor:
+        //可判断数组类型;
+        //任何一个对象都有constructor属性,指向创建这个对象的构造函数
+        var arr=[1,2,3];  //这是一个数组对象
+        console.log(arr.constructor==Array);
+
+        //4.Object.prototype.toString.call()
+        //通用但是略繁琐
+        console.log(Object.prototype.toString.call([1,2,3])=='[object Array]');
+        console.log(Object.prototype.toString.call(new Date())=='[object Date]');
+        console.log(Object.prototype.toString.call(3)=='[object Number]');
+        console.log(Object.prototype.toString.call('1')=='[object String]');
+        console.log(Object.prototype.toString.call(function(){})=='[object Function]');
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var i=0,n=10;
+        var arr=[1,2,3,4,5];
+        for(;i<n;i++){
+            console.log(arr[i]);
+        }
+        //输出结果:1,2,3,4,5,undefined,undefined,undefined,undefined,undefined
+
+
+        for(i in arr){
+            console.log(arr[i]);
+        }
+        //输出结果:1,2,3,4,5
+
+        Array.prototype.x="inherited";
+
+        //注意:for in遍历会遍历数组对象的原型链上所有的属性及属性值,我们可以用hasOwnProperty来过滤;且for in是不保证顺序的
+        for(i in arr){
+            console.log(arr[i]);
+        }
+        //输出结果:1,2,3,4,5,inherited
+
+        //hasOwnProperty()这个方法,左边是对象名,右边是属性名,这里是数组对象,所以右边就用索引值即可
+        for(i in arr){
+            if(arr.hasOwnProperty(i)){
+                console.log(arr[i]);
+            }
+        }
+
+        //二维数组的遍历:
+        var arr1=[[0,1],[2,3],[4,5]];
+        var i,j;
+        var row;
+        for(i=0;i<arr1.length;i++){
+            row=arr1[i];
+            console.log('row'+i);
+            for(j=0;j<row.length;j++){
+                console.log(row[j]);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

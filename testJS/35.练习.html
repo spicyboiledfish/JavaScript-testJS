@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        var a={};
+//        a.b=function(){console.log(1);};
+//        a.b();
+//        a=10;
+//        console.log(a);
+//        //因为js是一个弱类型语言
+//
+//        var name = "The Window";
+//
+//        var object = {
+//            name : "My Object",
+//
+//            getNameFunc : function(){
+//                return function(){
+//                    return this.name;
+//                };
+//
+//            }
+//
+//        };
+//        console.log(object.getNameFunc()());
+//
+//        var o={
+//            props:37,
+//            f:function(){
+//                return this.props;
+//            }
+//        };
+//        console.log(o.f());
+
+        var o={
+            props:37,
+            f:function(){
+                return function(){
+                    return this.props;
+                }
+            }
+        };
+        var fn= o.f();
+        fn();
+        console.log(o.f()());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul,li{
+            padding:0;
+            margin:0;
+        }
+        #box{
+            width:100px;
+            margin:30px auto;
+            border:1px solid #ccc;
+        }
+        a{
+            display: inline-block;
+            width:100px;
+            text-align: center;
+            text-decoration: none;
+            color:#333;
+            height:24px;
+            line-height: 24px;
+        }
+        #up{
+            background: url("img/down.gif") no-repeat 16px center;
+        }
+        #list{
+            display: none;
+        }
+        #list li{
+            list-style: none;
+            height:24px;
+            line-height: 24px;
+            text-align: center;
+            color:#333;
+        }
+        #list li:hover{
+            background:#ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="up"><a href="#">购物</a></div>
+        <ul id="list">
+            <li>香蕉</li>
+            <li>芒果</li>
+            <li>凤梨</li>
+            <li>葡萄</li>
+        </ul>
+    </div>
+</body>
+<script>
+    var up=document.getElementById("up");
+    var list=document.getElementById("list");
+    var box=document.getElementById("box");
+    up.onmouseenter=function(){
+        list.style.display="block";
+        up.style.backgroundImage="url(img/up.gif)";
+    };
+    box.onmouseleave=function(){
+        list.style.display="none";
+        up.style.backgroundImage="url(img/down.gif)";
+    }
+</script>
+</html>

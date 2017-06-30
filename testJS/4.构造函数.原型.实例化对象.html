@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //原型是什么?
+        //原型就是创建构造函数的时候,系统默认与其相关联的一个空的对象.   构造函数名.prototype
+        function Person(){
+
+        }
+        console.log(Person.prototype)
+
+        //实例化:
+        //实例化就是创建构造函数的过程,实例出一个单独的对象
+        var p = new Person();
+        console.log(p.__proto__==Person.prototype)
+
+        Person.prototype.bark=function(){
+            console.log("bark")
+        }
+        p.sex=function(){
+            console.log("p的性别");
+        };
+        //获取一个对象的方法的时候,首先在这个对象中进行查找,如果没有,就会去找他的原型里是否有这个方法
+        //设置一个对象的属性的时候,首先看在这个对象中有没有这个属性,如果有就修改,如果没有就添加
+
+        var p1 = new Person();
+        p1.sex=function(){
+            console.log("p1的性别");
+        }
+        p.sex();
+        p1.sex();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

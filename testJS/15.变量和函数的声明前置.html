@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //函数声明变量前置了,会把function add(a,b)前置,所以添加参数1,2即可成功打印;
+        var num = add(1,2);
+        console.log("num",num);
+        function add(a,b){        //声明一个函数add
+            a=+a; //一元运算符,对数字没有影响,对字符串会将字符串转化为数字
+            b=+b;
+            if(isNaN(a)||isNaN(b)){
+                return;
+            }
+            return a+b;
+        }
+
+        //函数表达式就不会前置.但是会把变量提升var add1前置, 这个变量前置只能是undefined
+        var num1=add1(1,2);
+        console.log("num1",num1);
+        var add1=function(a,b){      //定义一个叫add1的匿名函数表达式
+            a=+a; //一元运算符,对数字没有影响,对字符串会将字符串转化为数字
+            b=+b;
+            if(isNaN(a)||isNaN(b)){
+                return;
+            }
+            return a+b;
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul,li{
+            padding:0;
+            margin:0;
+        }
+        #one{
+            width:100px;
+            margin: 30px auto;
+            text-align: center;
+        }
+        a{
+            display: inline-block;
+            width:100px;
+            height:24px;
+            line-height: 24px;
+            text-decoration: none;
+            color:#666;
+            font-size: 14px;
+            border:1px solid #ccc;
+        }
+        #two{
+            display: none;
+        }
+        #two li{
+            list-style: none;
+            height:24px;
+            line-height: 24px;
+            text-align: center;
+            color:#666;
+            font-size: 14px;
+        }
+        #two li:hover{
+            background:#ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+        <a href="#">购物</a>
+        <ul id="two">
+            <li>香蕉</li>
+            <li>苹果</li>
+            <li>梨</li>
+            <li>橙子</li>
+        </ul>
+    </div>
+</body>
+<script>
+    var one=document.getElementById("one");
+    var two=document.getElementById("two");
+    one.onmouseenter=function(){
+        two.style.display="block";
+    }
+    one.onmouseleave=function(){
+        two.style.display="none";
+    }
+</script>
+</html>

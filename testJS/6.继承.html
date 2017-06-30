@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Person(name) {       //构造函数Person
+            this.name=name;
+            this.showMe=function() {
+                console.log(this.name);
+            }
+        };
+
+        Person.prototype.from=function() {        //构造函数的原型 修改原型的属性from
+            console.log('I come from prototype.');
+        };
+
+        function SubPerson() {                    //构造函数SubPerson
+        }
+        SubPerson.prototype=new Person();         //构造函数SubPerson的原型继承了Person实例化对象
+
+        var subOne=new SubPerson();               //实例化对象subOne
+        subOne.from();                            //subOne中本身没有这个属性,那么就会去他的原型里面找,找到了
+        console.log(subOne.constructor);                //subOne原型有constructor,继承的是Person的原型,所以找Person的constructor属性,就是Person本身
+        console.log(SubPerson.prototype.constructor);   //SubPerson的原型,继承了Person,然后找原型的constructor属性,也就是Person(){}构造函数
+    </script>
+</head>
+<body>
+
+</body>
+</html>

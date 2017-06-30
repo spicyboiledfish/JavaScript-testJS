@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function foo(x,y,z){
+            console.log("arguments.length",arguments.length);   //返回形参的长度:2
+            console.log("arguments[0]",arguments[0]);   //返回形参的第一个数:1
+            arguments[0]=10;         //用arguments[0]可以改变实参的第一个参数x
+            console.log(x);          //10
+            arguments[2]=100;        //实参中没有z这个数,只有0,1两个x/y实参,所以改变z这个形参是行不通的
+            console.log(z);          //undefined
+        }
+        foo(1,2);
+        console.log("foo.name",foo.name);       //返回函数名:"foo"
+        console.log("foo.length",foo.length);     //返回函数形参的长度:3
+
+        //总结:argumnets是一个类数组,从0开始索引,但是是没有Array.prototype的方法的;可以查看函数实参的长度,读取实参,改变实参数据;但是是不能修改形参的数据;
+        //foo.name是函数名,foo.length是函数形参的长度.
+    </script>
+</head>
+<body>
+
+</body>
+</html>
