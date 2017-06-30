@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //1.数组解构赋值
+    'use strict';
+    function breakfast(){
+        return ['苹果','香蕉','梨子'];
+    }
+    let [apple,banana,lizi] = breakfast();
+    console.log(apple,banana,lizi);
+
+    //2.对象解构赋值
+    function lunch(){
+        return {
+            fruits:'苹果',
+            cake:'蛋糕',
+            dessert:'提拉米苏'
+        }
+    }
+    let {fruits:fruits,cake:cake,dessert:dessert} = lunch();
+    console.log(fruits,cake,dessert);
+</script>
+</html>

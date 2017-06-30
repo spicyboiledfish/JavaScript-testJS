@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //将解构对象的方法应用在函数的参数中
+    'use strict';
+    function breakfast(dessert,fruits,{cake,apple}={}){
+        console.log(dessert,fruits,cake,apple);
+    }
+    breakfast('蛋糕','水果',{cake:'提拉米苏',apple:'苹果'});   //蛋糕 水果 提拉米苏 苹果
+</script>
+</html>

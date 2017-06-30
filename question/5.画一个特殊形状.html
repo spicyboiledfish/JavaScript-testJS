@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width:200px;
+            height:80px;
+            border:1px solid #000;
+            border-radius: 20px;
+            background-color: yellowgreen;
+            position: relative;
+        }
+        #a{
+            width:25px;
+            height:50px;
+            border:1px solid #000;
+            position: absolute;
+            top:50%;
+            left:-1px;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
+            border-left:1px solid #fff;
+            background-color: #fff;
+            z-index:2;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="a"></div>
+    </div>
+</body>
+</html>
