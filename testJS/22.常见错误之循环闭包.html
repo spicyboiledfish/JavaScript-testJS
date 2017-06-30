@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            border:1px solid #000;
+            margin-bottom:10px;
+            width:100px;
+            height:50px;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+
+            //常见错误的循环闭包: 因为当你点击div1的时候,这个循环已经结束了,
+            //而循环结束返回的i就是4,所以点击每个div,返回的都是4
+//            for(var i= 1; i<=3;i++){
+//                document.getElementById("div"+i).addEventListener("click",function(){
+//                    console.log(i);   //点击每一个div,返回的都是4
+//                })
+//            }
+
+            //解决常见错误的循环闭包:
+            for(var i=1;i<=3;i++){
+                !function(i){
+                    document.getElementById("div"+i).addEventListener("click",function(){
+                        console.log(i);
+                    })
+
+                }(i);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">aaa</div>
+    <div id="div2">bbb</div>
+    <div id="div3">ccc</div>
+</body>
+</html>

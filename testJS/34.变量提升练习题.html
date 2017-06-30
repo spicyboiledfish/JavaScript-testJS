@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+          //案例1:
+//        var num = 123;
+//        function f1() {
+//             console.log( num );
+//        }
+//        function f2() {
+//             num = 456;
+//             f1();
+//        }
+//        f2();  //456
+
+
+        //案例2:
+//        var arr = [];
+//        for(var i = 0; i < 10; i++){
+//            arr.push(i);
+//        }
+//
+//        for (var i = 0; i < 10; i++) {
+//            console.log(arr[i]);      //依次输出0,1,2,3,4,5,6,7,8,9
+//        }
+
+        //案例3:
+//          function foo() {
+//              var num = 123;
+//              console.log(num); //123
+//          }
+//          foo();
+//          console.log(num); //num is not defined
+
+        //案例4:
+          var scope = "global";
+          function foo() {
+              console.log(scope); //
+              var scope = "local";
+              console.log(scope); //
+          }
+          foo();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

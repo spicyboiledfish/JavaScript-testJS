@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr=new Array();
+        console.log(Array.prototype);  //打印出Array.prototype的所有方法,那么对数组而言是可以继承所有的这些方法的
+
+        //注意:以下的1-12的方法都是Array.prototype中的ES5中的原型对象中的方法
+        //1.join()  将数组转化成字符串,并且以某个分隔符进行连接,默认是用的逗号","
+        var arr1=[1,2,3];
+        console.log(arr1.join('_'));
+
+        //封装一个方法,可以连续打印重复的字符,重复一个字符串几次;
+        //原理,假设n=3,那么new Array(4)就是新建一个长度为4的空数组[ , , , ],用字符'a'串起来,正好是三个逗号,即三个a
+        function repeatArray(str,n){
+            console.log(new Array(n+1).join(str));
+        }
+        repeatArray('a',3);
+        repeatArray('Hi',5);
+
+        //2.reverse()  将数组中的顺序颠倒,这个方法调用完是可以改变这个数组的,原数组被修改
+        var arr2=[1,2,3];
+        arr2.reverse();
+        console.log(arr2); //这时候arr2调用完reverse方法后,就已经改变了arr2数组了,即原数组被修改
+
+        //3.sort()  默认是以字母的顺序进行排序的,且原数组会被修改
+        var arr3=["a","d","c","b"];
+        arr3.sort();
+        console.log(arr3);    //返回 ["a","b","c","d"]
+
+        var arr4=[13,5,24,41,3];
+        arr4.sort();
+        arr4.sort(function(a,b){
+            return a-b;      //因为减号这个操作符,默认是可以将字符串转化为number类型的
+        });
+
+        //如果是数组元素是对象的话,那么在sort函数中就用点的形式取数字
+        var arr5=[{age:25},{age:3},{age:6}];
+        arr5.sort();   //排序无效,仍然是按照字母顺序进行排序的
+        arr5.sort(function(a,b){      //按照数字大小进行排序了
+            return a.age- b.age;
+        });
+
+        arr5.forEach(function(item){   //forEach用来循环遍历数组的
+            console.log('age',item.age)
+        });
+
+        //4.concat()  合并数组,注意:concat方法(与reverse/sort方法不同)是不会改变原数组的,只会进行简单的调用,只能去掉外面一层数组符号
+        var arr6=[1,2,3];
+        console.log(arr6.concat([4,6,7]));     //[1,2,3,4,6,7]
+        console.log(arr6.concat([11,12],13));   //[1,2,3,11,12,13]
+        console.log(arr6.concat([11,[12,13]]));  //[1,2,3,11,[12,13]];
+
+        //5.slice()  截取片段slice(i,n) i表示截取开始位置的索引,n为截取结束的位置的索引,[i,n),左闭右开区间,从到n的数组,原数组未被修改的
+        var arr7=[1,2,3,4,5];
+        arr7.slice(1,3);    //返回[2,3]
+        arr7.slice(1);      //[2,3,4,5]  如果只有一个参数的话,就表示开始位置索引到数组末尾所有元素
+        arr7.slice(1,-1);   //[2,3,4]    -1表示数组的最后一个元素,根据左闭右开原则
+        arr7.slice(-4,-3);   //[2]       -1表示数组的最后一个元素,-2就是倒数第二个,以此类推
+
+        //6.splice() 数组拼接,删除从某个索引值开始的几个元素后,再重新拼接成数组,且原数组是被修改了的
+        var arr8=[1,2,3,4,5];
+//        arr8.splice(2);     //[1,2]    删除从索引值2开始往后的所有元素3,4,5之后,拼接的数组为[1,2]
+//        arr8.splice(2,2);  //[1,2,5];  删除从索引值2开始往后的两个元素3,4之后,拼接的数组是[1,2,5]
+        arr8.splice(1,1,"a","b");   //[1,"a","b",3,4,5]  删除索引值1开始的一个元素2,然后在这个位置添加两个元素:"a","b"
+
+        //以下开始是ES5新增的API
+        //7.forEach(function(item,index){})    数组中循环遍历方法的一种,还有for in; item表示元素本身,index是索引值
+
+        //8.map(function(item){})   数组中循环遍历方法. 不会改变原数组的元素.
+        var arr9=[1,2,3];
+        arr9.map(function(item){      //打印结果 2 3 4
+            console.log(item+1)
+        });
+        console.log(arr9);            //返回的仍然是[1,2,3]
+
+        //9.filter(function(item,index){})  过滤数组,函数返回值是过滤后的数组元素,但是并不会改变原数组.
+        var arr10=[1,2,3,4,5,6,7,8,9,10];
+        arr10.filter(function(item,index){     //[2,4]
+            return item%2==0 && index<5;
+        });
+        console.log(arr10);         //[1,2,3,4,5,6,7,8,9,10]
+
+        //10.every(function(item){})和some(function(item){})  判断数组中的每一个元素是不是都满足一个条件/存在某个元素满足条件,
+        // 返回布尔类型,且不会改变原数组
+        var arr11=[1,2,3,4,5];
+        arr11.every(function(item){        //false  不是每个元素都符合条件
+            return item>4
+        });
+        arr11.some(function(item){         //true   存在元素符合条件,即5
+            return item>4
+        });
+
+        //11.reduce(function(x,y){},m);    //每两个两个一起进行判断,得到的值作为新的x值.m参数指定为m为第一个x,(m可以省略)从左到右依次.不会改变原数组.
+        var arr12=[3,6,9];
+        arr12.reduce(function(x,y){
+            return x>y?x:y;
+        })
+        //reduceRight(function(x,y){});   //方法和reduce一样,只是这次是从右向左开始依次进行判断取值.
+
+        //12.indexOf()  //判断元素在数组中的索引值,有返回索引值,没有返回-1,顺序是从左到右,且不会改变原数组
+        var arr13=[1,2,3,2,1];
+        arr13.indexOf(1,-1);   //查找1,且从-1的位置开始从左到右开始找,那么应该就是最后一个元素,即4
+        arr13.indexOf(2,-1);   //查找2,且从-1的位置开始从左到右开始找,那么则没有,返回-1
+        //lastIndexOf()   //跟indexOf()方法一样,只是这是从右到左开始找元素索引值.
+        // 注意这里的索引值都是不变的,不可能从右到左,那索引值也从右到左开始数, arr13的索引值一直都是0,1,2,3,4
+        arr13.lastIndexOf(2,-2)   //查找2,从-2开始找,返回3
+
+
+        //Array构造函数的方法有以下:(也是ES5)
+        //1.Array.isArray([])  判断一个构造函数是否是数组
+
+        //判断数组的方法有以下:
+        //1. [] instanceof Array
+        //2. ({}).toString.call([])==='[object Array]'
+        //3. [].constructor===Array
+    </script>
+</head>
+<body>
+
+</body>
+</html>

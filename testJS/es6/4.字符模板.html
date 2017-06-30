@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //1.普通写法:
+    'use strict';
+    let dessert = '苹果', drink = '啤酒';
+    let breakfast = '今天的早餐是' + dessert + '与' + drink + '!';
+    console.log(breakfast);    //今天的早餐是苹果与啤酒!
+
+    //2.用反引号:
+    let dessert1 = '苹果', drink1 = '啤酒';
+    let breakfast1 = `今天的早餐是${dessert1}与${drink1}!`;
+    console.log(breakfast1);  //今天的早餐是苹果与啤酒!
+
+    //3.带标签的字符模板:
+    let dessert2 = '苹果', drink2 = '啤酒';
+    let breakfast2 = kitchen`今天的早餐是${dessert2}与${drink2}!`;
+    function kitchen(strings,...values){
+        //console.log(strings);   //["今天的早餐是", "与", "!", raw: Array[3]]   注意:raw是没有处理过的字符.比方\n在strings中不显示,却显示在raw中
+        //console.log(values);    //["苹果", "啤酒"]
+        let result ='';
+        for(var i=0;i<values.length;i++){
+            result+=strings[i];
+            result+=values[i];
+        }
+        result+=strings[strings.length-1];   //加上 !
+        return result;
+    }
+    console.log(breakfast2);   ////今天的早餐是苹果与啤酒!
+</script>
+</html>

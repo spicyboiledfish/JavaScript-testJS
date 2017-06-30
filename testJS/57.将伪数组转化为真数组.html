@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //将伪数组转化为真数组
+        var fakeArr={
+            0:1,
+            1:2,
+            2:3,
+            length:3
+        }
+        var realArr=[];
+        realArr.push.apply(realArr,fakeArr);
+
+        //求数组的最大值:
+        var arr=[1,8,5,44,7,9];
+        Math.max.apply(null,arr);
+    </script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function outer(){
+            var data=10;
+            return function inner(){
+                return data;
+            }
+        }
+        console.log(outer()());
+
+        var o={
+            ddd:37,
+            f:function(){
+                //这个函数内没有定义变量
+                return function(){
+                    return this.ddd;
+                }
+            }
+        };
+
+        var fn=o.f();
+        var fn = function(){
+            return this.ddd;
+        }
+        fn();
+        //f是一个函数,相当于:
+//        function f(){
+//            return function (){
+//                return this.props;
+//            }
+//        }
+
+        var name = "The Window";
+
+        var object = {
+            name : "My Object",
+
+            getNameFunc : function(){
+                var that = this;
+                return function(){
+                    return that.name;
+                };
+
+            }
+
+        };
+        alert(object.getNameFunc()());   //My Object
+    </script>
+</head>
+<body>
+
+</body>
+</html>

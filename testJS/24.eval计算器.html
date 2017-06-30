@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload= function () {
+            var result=document.getElementById("result");
+            var btn=document.getElementById("btn");
+            btn.onclick=function(){
+                var num1=document.getElementById("num1").value;
+                var num2=document.getElementById("num2").value;
+                var operator=document.getElementById("operator").value;
+                result.innerText=eval(num1+operator+num2);
+            }
+            console.log()
+        }
+
+    </script>
+</head>
+<body>
+    <input type="text" id="num1" />
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="num2" />
+    <button id="btn">=</button>
+    <span id="result"></span>
+</body>
+</html>

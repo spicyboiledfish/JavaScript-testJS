@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        Person.prototype.hi=function(){
+            console.log("Hi,my name is"+this.name+",I'm"+this.age+"years old now.");
+        };
+        Person.prototype.LEGS_NUM=2;
+        Person.prototype.ARMS_NUM=2;
+        Person.prototype.walk= function () {
+            console.log(this.name+"is walking...");
+        };
+
+        function Student(name,age,className){
+            Person.call(this,name,age);
+            this.className=className;
+        }
+        Student.prototype=Object.create(Person.prototype);
+        Student.prototype.constructor=Student;
+
+        Student.prototype.hi=function(){
+            console.log("Hi,my name is "+this.name+" ,I'm "+ this.age
+                    +" years old now,and from "+this.className+".");
+        };
+
+        Student.prototype.learn=function(subject){
+            console.log(this.name+"is learning "+subject+" at "+this.className+".");
+        };
+
+        //test
+        var bosn=new Student("Bosn",27,"Class 3,Grade 2");
+        bosn.hi();               //Hi,my name is Bosn,I'm 27 years old now,and from Class 3,Grade 2.
+        bosn.LEGS_NUM;            //2
+        bosn.walk();             //Bosnis walking...
+        bosn.learn("math");      //Bosnis learning math at Class 3,Grade 2.
+
+
+        Student.prototype.x=101;
+        console.log(bosn.x);       //101
+        Student.prototype={y:2};
+        console.log(bosn.y);       //undefined
+        console.log(bosn.x);       //101
+
+        var nunnly=new Student("Nunnly",3,"Class LOL KengB");
+        console.log(nunnly.x);     //undefined
+        console.log(nunnly.y);     //2
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

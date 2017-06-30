@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //正常情况下,outer函数中定义了一个局部变量localVal,函数返回这个变量.那么调用之后结果是30,
+        // 由于垃圾回收机制,这个局部变量在调用完之后就会被销毁.
+        function outer(){
+            var localVal=30;
+            return localVal;
+        }
+        outer();
+
+        //闭包的情况:
+        //这里的outer1函数比较特殊,返回值是一个函数,
+        //那么定义一个变量var func=outer1(),就相当于var func=function(){ return localVal1; }
+        //这个时候outer1()调用完之后,仍然返回localVal这个局部变量,此时localVal没有销毁;
+        //再次调用func(),就会返回localVal变量,是20
+        function outer1(){
+            var localVal1=20;
+            return function (){
+                return localVal1;
+            }
+        }
+        var func=outer1();
+        func();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        "use strict";
+        function Student(data){
+
+            this.name = data.name || "Jon Doe";
+            this.age = data.age>=0 ? data.age : -1;
+
+            this.getInfo = function () {
+                return this.name + ", " + this.age;
+            };
+
+            this.sayHi = function () {
+                window.setTimeout( ()=>{
+                    console.log( this );
+            }, 100 );
+            }
+
+        }
+
+        let mary = new Student({
+            name: "Mary Lou",
+            age: 13
+        });
+
+        console.log( mary.getInfo() ); // "Mary Lou, 13"
+        mary.sayHi();
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function mo(){
+            var x=0;
+            return function(){
+                alert(++x);
+            };
+
+        }
+        var a=mo();
+        var b=mo();
+
+        //以下执行结果:
+        a();  //1
+        a();  //2
+        b();  //1
+    </script>
+</head>
+<body>
+
+</body>
+</html>

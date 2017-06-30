@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        //1.for-in继承
+        function Person(){              //父类
+            this.name="水煮鱼";
+            this.age=18;
+        }
+        function Son(){                 //子类
+
+        }
+        var p=new Person();
+        var s=new Son();
+        for(var k in p){
+            s[k]=p[k];
+        }
+        console.log(s.name);           //水煮鱼
+        console.log(s.age);            //18
+
+        //2.原型链继承
+        function Human(){
+            this.name="香辣虾";
+            this.age=21;
+        }
+        function Man(){
+
+        }
+        Man.prototype=new Human();
+        var m=new Man();
+        console.log(m.name);           //香辣虾
+        console.log(m.age);            //21
+
+        //3.经典继承( Object.create)
+        var animal={
+            name:"阿咪",
+            type:"猫科"
+        };
+        var a=Object.create(animal)    //ES5
+        console.log(a.name);           //阿咪
+        console.log(a.type);           //猫科
+    </script>
+</head>
+<body>
+
+</body>
+</html>

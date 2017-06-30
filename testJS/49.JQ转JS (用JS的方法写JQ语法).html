@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.12.1.min.js"></script>
+    <script>
+        $(function(){
+            var btn=$('button');
+            var vdo=$('video');
+            btn.click(function(){
+                vdo.get(0).play();      //第一个视频播放
+//                vdo[1].play();        //第二个视频播放
+                vdo.eq(1).hide();       //第二个视频隐藏
+            });
+            var divs=$('div');
+            divs.css({
+                "width":'200px',
+                "height":'200px',
+                "background-color":'yellowgreen'
+            });
+            console.log(divs.css('width'));    //获取css属性值,需要加引号包裹属性名
+        })
+    </script>
+</head>
+<body>
+    <button>
+        播放
+    </button>
+    <video src="movie.mp4"></video>
+    <video src="movie.mp4"></video>
+    <div></div>
+</body>
+</html>

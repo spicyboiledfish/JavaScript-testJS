@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        alert(x);
+
+        var x=10;
+        alert(x);
+        x=20;
+
+        function x(){}
+        alert(x);
+
+        if(true){
+            var a=1;
+        }else{
+            var b=true;
+        }
+
+        alert(a);
+        alert(b);
+
+        //考虑VO初始化的阶段和执行阶段,并且分析出每个alert的打印结果
+        //1.初始化阶段的VO:
+            //x变量:undefined
+            //x函数:function x(){}     x变量忽略
+            //a:undefined
+            //b:undefined
+
+        //2.执行阶段的VO:
+            //alert(x)   function x(){}
+            //alert(x)   x:10;
+            //alert(x)   x:20;
+            //alert(a)   a:1;
+            //alert(b)   b:undefined;
+    </script>
+</head>
+<body>
+
+</body>
+</html>
