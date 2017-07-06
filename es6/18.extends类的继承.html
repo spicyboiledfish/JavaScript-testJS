@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict';
+    class Person{
+        constructor(name,birthday){
+            this.name = name;
+            this.birthday = birthday;
+        }
+
+        intro(){
+            return `${this.name},${this.birthday}`;
+            //注意这里的${},这个$符号后面跟的是大括号,不是小括号
+            //这里的this指的是Person这个类
+        }
+
+    }
+
+    class Chef extends Person{
+        constructor(name,birthday){
+            super(name,birthday);
+            //调用super这个方法,是去继承Person类中的初始化constructor的内容的
+        }
+    }
+
+    let wanghao = new Chef('王睿','2016-01-01');
+    console.log(wanghao.intro());
+</script>
+</html>

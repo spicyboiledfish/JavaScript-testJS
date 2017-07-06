@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict';
+    let desserts = new Set('🍎🍌🍐');   //苹果,香蕉,梨子
+    console.log(desserts);
+    desserts.add('🍇');    //葡萄
+    desserts.add('🍇');    //葡萄
+    desserts.add('🍇');    //葡萄
+    //Set函数是没有重复的项的,所以这三次加了同样的元素,打印出来是一样的.相当于去重了.
+    console.log(desserts);
+    console.log(desserts.size);
+    console.log(desserts.has('🍎'));
+    desserts.forEach(desserts=>{console.log(desserts)});
+    desserts.delete('🍐');
+    console.log(desserts);
+    desserts.clear();
+    console.log(desserts);
+</script>
+</html>

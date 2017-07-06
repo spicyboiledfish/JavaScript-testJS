@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict';
+    //1.第一种方法:
+    //首先写一个生成器:
+    function* checf(){
+        yield '苹果';
+        yield '梨子';
+    }
+
+    //写一个基于这个生成器的迭代器:
+    let foods = checf();
+    console.log(foods.next());
+    console.log(foods.next());
+    console.log(foods.next());
+
+
+    //2.进一步优化:
+    function* checf1(foods){
+        for (let i=0;i<foods.length;i++){
+            yield foods[i];
+        }
+    }
+    let foods1 = checf1(['香蕉','葡萄']);
+    console.log(foods1.next());
+    console.log(foods1.next());
+    console.log(foods1.next());
+
+
+</script>
+</html>

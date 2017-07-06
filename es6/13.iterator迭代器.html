@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict';
+    function chef(foods){
+        let i=0;
+        return {
+            next(){
+                let done = (i>foods.length) ? true : false;
+                let value = !done ? foods[i++] : undefined;
+                return {
+                    value:value,
+                    done:done
+                }
+            }
+        }
+    }
+    let fruits = chef(['苹果','梨子']);
+    console.log(fruits.next());
+    console.log(fruits.next());
+    console.log(fruits.next());
+</script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict';
+    class Chef{
+        constructor(food){
+            this.food = food;
+            this.dish = [];
+        }
+
+        get menu(){
+            return this.dish;
+        }
+
+        set menu(dish){
+            this.dish.push(dish);
+        }
+
+        cook(){
+            console.log(this.food);
+        }
+    }
+
+    let wanghao = new Chef();
+    console.log(wanghao.menu = '烤虾球');
+    console.log(wanghao.menu = '那么大鸡翅');
+    console.log(wanghao.menu);
+</script>
+</html>

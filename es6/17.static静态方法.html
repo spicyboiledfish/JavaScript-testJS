@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    'use strict';
+    //static是不需要实例化就可以使用的静态方法
+    class Chef{
+        constructor(food){
+            this.food=food;
+        }
+
+        static cook(food){
+            console.log(food);
+        }
+    }
+    Chef.cook("香蕉");
+
+
+</script>
+</html>
